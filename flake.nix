@@ -4,8 +4,10 @@
     flake-utils.url = "github:numtide/flake-utils";
     gomod2nix.url = "github:tweag/gomod2nix";
     protoc-gen-validate-src = {
+      type = "git";
       flake = false;
-      url = github:envoyproxy/protoc-gen-validate;
+      url = "https://github.com/envoyproxy/protoc-gen-validate";
+      ref = "refs/tags/v0.6.2";
     };
   };
 
