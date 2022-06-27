@@ -27,6 +27,9 @@
               src = "${protoc-gen-validate-src}/";
               modules = ./gomod2nix.toml;
               subPackages = [ "." ];
+              postInstall = ''
+                cp ${protoc-gen-validate-src}/validate/validate.proto $out/validate.proto
+              '';
           };
         };
         
